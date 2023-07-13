@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="getUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="full_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="production_line" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="full_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="production_line" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAccount">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMasterData">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMasterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMasterDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertMasterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="machine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="process_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="width" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="height" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scrap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertMasterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertMasterDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateMasterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="machine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="process_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="width" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="height" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scrap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateMasterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateMasterDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteMasterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteMasterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteMasterDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMasterProcess">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMasterProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMasterProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertMasterProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="process_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="process_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="process_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertMasterProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertMasterProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateMasterProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="process_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="process_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="process_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateMasterProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateMasterProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteMasterProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="process_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteMasterProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteMasterProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConnectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="getUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:insertUsers" />
+  </wsdl:message>
+  <wsdl:message name="insertUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:insertUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:updateUsers" />
+  </wsdl:message>
+  <wsdl:message name="updateUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:updateUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteUsers" />
+  </wsdl:message>
+  <wsdl:message name="deleteUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:getAccount" />
+  </wsdl:message>
+  <wsdl:message name="getAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:getAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:insertAccount" />
+  </wsdl:message>
+  <wsdl:message name="insertAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:insertAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:updateAccount" />
+  </wsdl:message>
+  <wsdl:message name="updateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:updateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteAccount" />
+  </wsdl:message>
+  <wsdl:message name="deleteAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMasterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getMasterData" />
+  </wsdl:message>
+  <wsdl:message name="getMasterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertMasterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:insertMasterData" />
+  </wsdl:message>
+  <wsdl:message name="insertMasterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:insertMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateMasterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:updateMasterData" />
+  </wsdl:message>
+  <wsdl:message name="updateMasterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:updateMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteMasterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteMasterData" />
+  </wsdl:message>
+  <wsdl:message name="deleteMasterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMasterProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:getMasterProcess" />
+  </wsdl:message>
+  <wsdl:message name="getMasterProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:getMasterProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertMasterProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:insertMasterProcess" />
+  </wsdl:message>
+  <wsdl:message name="insertMasterProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:insertMasterProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateMasterProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:updateMasterProcess" />
+  </wsdl:message>
+  <wsdl:message name="updateMasterProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:updateMasterProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteMasterProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteMasterProcess" />
+  </wsdl:message>
+  <wsdl:message name="deleteMasterProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteMasterProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnect" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PlanningWSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input message="tns:getUsersSoapIn" />
+      <wsdl:output message="tns:getUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertUsers">
+      <wsdl:input message="tns:insertUsersSoapIn" />
+      <wsdl:output message="tns:insertUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUsers">
+      <wsdl:input message="tns:updateUsersSoapIn" />
+      <wsdl:output message="tns:updateUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsers">
+      <wsdl:input message="tns:deleteUsersSoapIn" />
+      <wsdl:output message="tns:deleteUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <wsdl:input message="tns:getAccountSoapIn" />
+      <wsdl:output message="tns:getAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <wsdl:input message="tns:insertAccountSoapIn" />
+      <wsdl:output message="tns:insertAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAccount">
+      <wsdl:input message="tns:updateAccountSoapIn" />
+      <wsdl:output message="tns:updateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAccount">
+      <wsdl:input message="tns:deleteAccountSoapIn" />
+      <wsdl:output message="tns:deleteAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMasterData">
+      <wsdl:input message="tns:getMasterDataSoapIn" />
+      <wsdl:output message="tns:getMasterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterData">
+      <wsdl:input message="tns:insertMasterDataSoapIn" />
+      <wsdl:output message="tns:insertMasterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMasterData">
+      <wsdl:input message="tns:updateMasterDataSoapIn" />
+      <wsdl:output message="tns:updateMasterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMasterData">
+      <wsdl:input message="tns:deleteMasterDataSoapIn" />
+      <wsdl:output message="tns:deleteMasterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMasterProcess">
+      <wsdl:input message="tns:getMasterProcessSoapIn" />
+      <wsdl:output message="tns:getMasterProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterProcess">
+      <wsdl:input message="tns:insertMasterProcessSoapIn" />
+      <wsdl:output message="tns:insertMasterProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMasterProcess">
+      <wsdl:input message="tns:updateMasterProcessSoapIn" />
+      <wsdl:output message="tns:updateMasterProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMasterProcess">
+      <wsdl:input message="tns:deleteMasterProcessSoapIn" />
+      <wsdl:output message="tns:deleteMasterProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnect">
+      <wsdl:input message="tns:TestConnectSoapIn" />
+      <wsdl:output message="tns:TestConnectSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PlanningWSSoap" type="tns:PlanningWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUsers">
+      <soap:operation soapAction="http://tempuri.org/insertUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsers">
+      <soap:operation soapAction="http://tempuri.org/updateUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsers">
+      <soap:operation soapAction="http://tempuri.org/deleteUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <soap:operation soapAction="http://tempuri.org/getAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <soap:operation soapAction="http://tempuri.org/insertAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccount">
+      <soap:operation soapAction="http://tempuri.org/updateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAccount">
+      <soap:operation soapAction="http://tempuri.org/deleteAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMasterData">
+      <soap:operation soapAction="http://tempuri.org/getMasterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterData">
+      <soap:operation soapAction="http://tempuri.org/insertMasterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMasterData">
+      <soap:operation soapAction="http://tempuri.org/updateMasterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMasterData">
+      <soap:operation soapAction="http://tempuri.org/deleteMasterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMasterProcess">
+      <soap:operation soapAction="http://tempuri.org/getMasterProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterProcess">
+      <soap:operation soapAction="http://tempuri.org/insertMasterProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMasterProcess">
+      <soap:operation soapAction="http://tempuri.org/updateMasterProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMasterProcess">
+      <soap:operation soapAction="http://tempuri.org/deleteMasterProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnect">
+      <soap:operation soapAction="http://tempuri.org/TestConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PlanningWSSoap12" type="tns:PlanningWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap12:operation soapAction="http://tempuri.org/getUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUsers">
+      <soap12:operation soapAction="http://tempuri.org/insertUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsers">
+      <soap12:operation soapAction="http://tempuri.org/updateUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsers">
+      <soap12:operation soapAction="http://tempuri.org/deleteUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <soap12:operation soapAction="http://tempuri.org/getAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <soap12:operation soapAction="http://tempuri.org/insertAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccount">
+      <soap12:operation soapAction="http://tempuri.org/updateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAccount">
+      <soap12:operation soapAction="http://tempuri.org/deleteAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMasterData">
+      <soap12:operation soapAction="http://tempuri.org/getMasterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterData">
+      <soap12:operation soapAction="http://tempuri.org/insertMasterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMasterData">
+      <soap12:operation soapAction="http://tempuri.org/updateMasterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMasterData">
+      <soap12:operation soapAction="http://tempuri.org/deleteMasterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMasterProcess">
+      <soap12:operation soapAction="http://tempuri.org/getMasterProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterProcess">
+      <soap12:operation soapAction="http://tempuri.org/insertMasterProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMasterProcess">
+      <soap12:operation soapAction="http://tempuri.org/updateMasterProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMasterProcess">
+      <soap12:operation soapAction="http://tempuri.org/deleteMasterProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnect">
+      <soap12:operation soapAction="http://tempuri.org/TestConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlanningWS">
+    <wsdl:port name="PlanningWSSoap" binding="tns:PlanningWSSoap">
+      <soap:address location="https://localhost:44338/PlanningWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PlanningWSSoap12" binding="tns:PlanningWSSoap12">
+      <soap12:address location="https://localhost:44338/PlanningWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
